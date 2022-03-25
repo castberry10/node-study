@@ -12,22 +12,24 @@ console.log('path.basename():', path.basename(string));
 console.log('----------------------------');
 
 console.log('path.parse():', path.parse(string));
+
 console.log('path.format():', path.format({
     dir: 'C:\\Users\\soc00',
     name:'path',
     ext: '.js',
 }));
 
-console.log('path.normalize():', path.normalize('C://users\\\\soc00\\\path.js'));
+console.log('path.normalize():', path.normalize('C://users\\\\soc00\\\path.js')); //정상적인 경로로 변환 
 console.log('----------------------------');
 
 console.log('path.isAbsolute(C:\\):', path.isAbsolute('C:\\'));
 console.log('path.isAbsolute(./home):', path.isAbsolute('./home'));
 console.log('----------------------------');
 
-console.log('path.sep():', path.relative('C:\\users\\soc00\\path.js', 'C:\\' ));
-console.log('path.sep():', path.join(__dirname,'..' , '/users', '.', '/soc00'));
-console.log('path.sep():', path.resolve(__dirname, '..', 'users', '.', '/soc00'));
+console.log('path.relative():', path.relative('C:\\users\\soc00\\path.js', 'C:\\' ));//경로 두개 넣으면 어디로 가야하는지 알려줌
+console.log('path.join():', path.join(__dirname,'..' , '/users', '.', '/soc00'));//여러인수 넣으면 합쳐준다. 
+console.log('path.resolve():', path.resolve(__dirname, '..', 'users', '.', '/soc00'));// /를 만나면 절대경로로 인식해서 앞의 경로 무시한다. 
+
 
 //-----------------------print-----------------------------
 // path.sep: \
