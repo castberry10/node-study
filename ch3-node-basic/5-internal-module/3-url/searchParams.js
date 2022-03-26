@@ -30,7 +30,7 @@ myURL.search = myURL.searchParams.toString();
 //     'limit' => '10',
 //     'category' => 'nodejs',
 //     'category' => 'javascript' }
-//   searchParams.getAll(): []
+//   searchParams.getAll(): [ 'nodejs', 'javascript' ]
 //   searchParams.get(): 10
 //   searchParams.has(): true
 //   searchParams.keys(): URLSearchParams Iterator { 'page', 'limit', 'category', 'category' }
