@@ -14,3 +14,7 @@ const {
       parentPort.close();
     });
   }
+  //
+//  from parent ping
+//  from worker pong
+//  worker exit
