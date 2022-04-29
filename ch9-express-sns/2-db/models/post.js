@@ -22,5 +22,8 @@ module.exports = class Post extends Sequelize.module{
             collate: 'utf8_general_ci',
         });
     }
-    static associate(db) 
+    static associate(db){
+        db.Post.belongTo(db.User);
+        db.Post.belongToMany(db.Hashtag, {through: 'PostHashtag'});
+    }
 };
