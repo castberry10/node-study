@@ -21,6 +21,7 @@ module.exports = class Hash extends Sequelize.Model{
 
         });
     }
-    static associate(db){}
+    static associate(db){db.Hashtag.belongToMany(db.Post, {through:'PostHashtag'});
+    }
     
 };
