@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GIF 챗</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div>
+			F12를 눌러 console탭과 network 탭을 확인
+			
+		</div>
+		<script>
+		const webSocket = new WebSocket("ws://localhost:8005");
+		webSocket.onopen = function (){
+			console.log('연결 성공');
+		};
+		webSocket.onmessage= function (event) {
+			console.log(event.data);
+			webSocket.send('클라이언트에서 서버로 답장을 보냅니다.');
+		};
+		</script>
+	</body>
+</html>

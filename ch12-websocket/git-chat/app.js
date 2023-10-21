@@ -11,7 +11,7 @@ const webSocket = require('./socket');
 const indexRouter = require('./routes');
 
 const app = express();
-app.set('post', process.env.PORT || 8005);
+app.set('port', process.env.PORT || 8005);
 app.set('view engine', 'html');
 
 nunjucks.configure('views', {
